@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Sección de entretenimiento</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- <link rel="stylesheet" href="css/normalize.css" /> -->
+	<link rel="stylesheet" href="../css/reset.css" />
+	<link rel="stylesheet" href="../css/style.css" />
+	<link rel="stylesheet" href="../css/styles.css" />
+	<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div class="contenedor">
+		<header class="header">
+			<figure class="logo">
+				<img class="logo-header" src="../images/logo-header.png" alt="Logo" width="300px" />
+			</figure>
+			<span class="burger-button icon-menu" id="burger-button"></span>
+			<nav class="nav" id="menu">
+				<ul class="lista-items">
+					<li class="item">
+						<a class="link-item" href="../index.html">Inicio</a>
+					</li>
+					<li class="item">
+						<a class="link-item" href="../views/deportes.html">Deportes</a>
+					</li>
+					<li class="item">
+						<a class="link-item" href="../views/economia.html">Economía</a>
+					</li>
+					<li class="item">
+						<a class="link-item" href="#">Entretenimiento</a>
+					</li>
+					<li class="item">
+						<a class="link-item" href="../views/contacto.html">contacto</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+	</div>
+
+	<div class="contenedor">
+		<section class="section-main">
+			<article class="article-principal">
+				<h2 class="title-a">Noticia de Entretenimiento</h2>
+				<h2 class="title-b">Escuadrón Suicida: ¿Un suicidio en taquilla de DC?</h2>
+				<img src="../images/escuadron.jpg" alt="imagen portada" />
+				<p class="description-main">Escuadrón Suicida, la tercera cinta del Universo Extendido de DC, ya se estrenó en Colombia. Expertos le han dado a la cinta críticas mayormente negativas.<br>Tras siete años de producción, cuatro meses de grabación en Canadá, varias escenas re-grabadas y revuelo por las críticas mayormente negativas hechas por expertos, el Escuadrón Suicida de DC llega a la pantalla grande.</p>
+			</article>
+
+			<aside class="aside">
+				<h2 class="title-a">Noticias relevantes</h2>
+				<article class="aside-article">
+					<img class="aside-img" src="../images/roca.jpg" alt="">
+					<div class="contenedor-aside">
+						<h3 class="title-aside">“La Roca” descontento con actor de Rápido y Furioso 8</h3>
+						<p class="p-aside">El actor estadounidense Dwayne Johnson”, mejor conocido en el mundo del espectáculo como “La Roca”.</p>
+						<a class="link-aside" href="#">Ver más</a>
+					</div>
+				</article>
+				<article class="aside-article">
+					<img class="aside-img" src="../images/jg.jpg" alt="">
+					<div class="contenedor-aside">
+						<h3 class="title-aside">Murió el cantante mexicano Juan Gabriel</h3>
+						<p class="p-aside">El 'Divo de Juárez', murió a los 66 años de edad en Santa Mónica, California (EE. UU.)</p>
+						<a class="link-aside" href="#">Ver más</a>
+					</div>
+				</article>
+				<article class="aside-article">
+					<img class="aside-img" src="../images/shakira.jpg" alt="">
+					<div class="contenedor-aside">
+						<h3 class="title-aside">Shakira y un baile sexy que causó revuelo en las redes sociales</h3>
+						<p class="p-aside">La colombiana compartió un video moviendo sus famosas caderas.</p>
+						<a class="link-aside" href="#">Ver más</a>
+					</div>
+				</article>
+			</aside>
+		</section>
+
+		<section class="section-sur">
+			<article class="article-sur">
+				<a class="link-sur" href="#">
+					<h3 class="title-c">Ante escándalo, se temía que Michael Jackson se suicidara</h3>
+					<img class="img-sur" src="../images/michael.jpg" alt="" width="300px" height="200px">
+					<p class="description-sur">"El Rey del Pop" se encontraba deprimido cuando se desató en los medios el tema de abuso infantil. <br>
+					Una ex novia de Michael Jackson reveló en un libro que El Rey del Pop, se deprimió tanto cuando surgió la primera acusación de abuso sexual infantil, que personas cercanas a él temían que se suicidara.</p>
+				</a>
+			</article>
+			<div class="video-responsive-contenedor">
+				<iframe class="video-responsive-src" width="560" height="315" src="https://www.youtube.com/embed/LcwJEP9NbYI" frameborder="0" allowfullscreen></iframe>
+			</div>
+		</section>
+	</div>
+
+	<div class="contenedor">
+		<footer class="footer">
+			<img class="logo-footer" src="../images/logo-footer.png" alt="Logo" width="300px" />
+			<div class="link-social">
+				<a class="link-social-footer" href="#">
+					<span class="icon-facebook"></span>
+				</a>
+				<a class="link-social-footer" href="#">
+					<span class="icon-twitter"></span>
+				</a>
+				<a class="link-social-footer" href="#">
+					<span class="icon-google-plus"></span>
+				</a>
+			</div>
+		</footer>
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+	<script>
+			var consulta = window.matchMedia('(max-width: 785px)');
+			consulta.addListener(mediaQuery);
+
+			var $burgerButton = document.getElementById('burger-button');
+			var $menu = document.getElementById('menu');
+			function toggleMenu(){
+				$menu.classList.toggle('active');
+				$burgerButton.classList.toggle('icon-menu');
+			};
+			function showMenu(){
+				$menu.classList.add('active');
+				$burgerButton.classList.add('icon-menu');
+			};
+			function hideMenu(){
+				$menu.classList.remove('active');
+				$burgerButton.classList.remove('icon-menu');
+			};
+			function mediaQuery(){
+				if (consulta.matches) {
+					console.log('Se cumplio');
+					$burgerButton.addEventListener('touchstart', toggleMenu);
+				} else {
+					console.log('No se ha cumplido');
+					$burgerButton.removeEventListener('touchstart', toggleMenu);
+				}
+			};
+			mediaQuery();
+			//touchstart
+			/*$burgerButton.addEventListener('touchstart', toggleMenu);
+			function toggleMenu(){
+				$menu.classList.toggle('active');
+				$burgerButton.classList.toggle('icon-close');
+			};*/
+			//Gestos touch
+			var $body = document.body;
+			var gestos = new Hammer($body);
+			
+			gestos.on('swipeleft', hideMenu);
+			gestos.on('swiperight', showMenu);
+		</script>
+	
+</body>
+</html>
